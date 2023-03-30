@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-
-  // roda o aplicativo informado - widget MaterialApp
+  // roda o aplicativo informado - widget MyApp - classe fora do main()
   // home - parâmetro obrigatorio - informa a tela principal (inicial) do app
-  // mostra uma tela (caixa - Container) azul
-  // Container - widget com parâmetros e outros widgets
-  // separar os parâmetros do widget por vírgulas
-  // Ctrl + Alt + l - organiza o código do widget
-  runApp(MaterialApp(
-    home: Container(
-      color: Colors.indigo,               // parâmetro de cor
-      alignment: Alignment.center,        // parâmetro de alinhamento
-      child: Text('Olá Flutter!'),  // widget filho (child) - Text
-    ),
-  ));
+  runApp(MyApp());
+}
+
+// criar o widget (CLASSE) MyApp personalizado fora do main()
+// o widget criado pode ser re-utilizado
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key); // construtor da classe
+
+  // método que cria e retorna um widget
+  @override
+  Widget build(BuildContext context) {
+    // o widget MaterialApp foi copiado e colado aqui
+    return MaterialApp(
+      home: Container(
+        color: Colors.indigo,
+        alignment: Alignment.center,
+        child: Text('Olá Flutter!!'),
+      ),
+    );
+  }
 }
