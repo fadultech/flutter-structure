@@ -1,4 +1,4 @@
-# flutter_estrutura
+# flutter-structure
 
 A new Flutter project.
 
